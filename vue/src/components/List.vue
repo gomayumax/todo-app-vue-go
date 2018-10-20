@@ -1,15 +1,22 @@
 <template>
     <ul>
-        <li>aaa</li>
-        <li>aaa</li>
-        <li>aaa</li>
-        <li>aaa</li>
+        <li v-for="item in items"
+            :key="item.id">
+            {{ item.text }}
+        </li>
     </ul>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
-  name: 'List'
+  name: 'List',
+  computed: {
+    ...mapGetters([
+      'items'
+    ])
+  }
 }
 </script>
 
