@@ -1,21 +1,20 @@
 <template>
     <div>
-        <form>
-            <input type="text"/>
-            <button>add</button>
-        </form>
-        <ul>
-            <li>aaa</li>
-            <li>aaa</li>
-            <li>aaa</li>
-            <li>aaa</li>
-        </ul>
+        <Form></Form>
+        <List></List>
     </div>
 </template>
 
 <script>
+import Form from './Form'
+import List from './List'
+
 export default {
-  name: 'Todo'
+  name: 'Todo',
+  components: {
+    Form,
+    List
+  }
 }
 </script>
 
